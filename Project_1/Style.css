@@ -48,3 +48,9 @@ h2{
     outline: 0;
     border-color: turquoise;
 }
+.form-control.success input{
+    border-color:green;
+}
+.form-control.error input{
+    border-color: red;
+}
