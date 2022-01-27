@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@200&display=swap');
 
+:root {
+--success-color:green;
+--error-color:red;
+
+}
+
 * {
     box-sizing: border-box;
 }
@@ -21,6 +27,7 @@ body{
 h2{
     text-align: center;
     margin: 0 0 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .form{
     padding: 30px 40px;
@@ -49,8 +56,32 @@ h2{
     border-color: turquoise;
 }
 .form-control.success input{
-    border-color:green;
+    border-color: var(--success-color);
 }
 .form-control.error input{
-    border-color: red;
+    border-color:var(--error-color);
+}
+
+.form-control small{
+    color: var(--error-color);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+}
+.form-control.error small{
+    visibility: visible;
+}
+
+.form button{
+    cursor: pointer;
+    background-color: navy;
+    border: 2px solid navy;
+    border-radius: 5px;
+    color: white;
+    display: block;
+    font-size: 16px;
+    padding: 10px;
+    margin-top: 20px;
+    width: 300px;
 }
